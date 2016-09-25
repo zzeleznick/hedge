@@ -19,3 +19,19 @@ extension UIColor{
         )
     }
 }
+
+// MARK: Enables get for line in lines by newline
+extension String {
+    var lines:[String] {
+        return self.characters.split { $0 == "\n" || $0 == "\r\n" }.map(String.init)
+    }
+    var trimmedLines:[String] {
+        return (self._lines).map({ el in
+            return el.trimmingCharacters(in: .whitespacesAndNewlines)
+        })
+    }
+    var digits:String {
+        return String(self.characters.filter { String($0).rangeOfCharacter(from: CharacterSet(charactersIn: "0123456789.")) != nil })
+    }
+    
+}

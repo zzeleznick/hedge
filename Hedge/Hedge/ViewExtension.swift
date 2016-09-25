@@ -29,6 +29,7 @@ extension UIView {
         switch element {
         case let label as UILabel:
             label.text = text
+            label.lineBreakMode = NSLineBreakMode.byWordWrapping
             label.numberOfLines = 0
         case let field as UITextField:
             field.placeholder = text

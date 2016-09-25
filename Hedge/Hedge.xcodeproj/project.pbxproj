@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2433A9631D976DC4004D35D2 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9621D976DC4004D35D2 /* EditViewController.swift */; };
+		2433A9651D979888004D35D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9641D979888004D35D2 /* HomeViewController.swift */; };
+		2433A9671D9798C2004D35D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9661D9798C2004D35D2 /* ViewController.swift */; };
+		2433A9691D979EF5004D35D2 /* DrugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9681D979EF5004D35D2 /* DrugViewController.swift */; };
 		2469921A1D975EA2009B07EE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246992191D975EA2009B07EE /* ViewExtension.swift */; };
 		2469921C1D975EC9009B07EE /* CoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469921B1D975EC9009B07EE /* CoreExtension.swift */; };
 		2469921E1D975F0E009B07EE /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469921D1D975F0E009B07EE /* ScanViewController.swift */; };
 		24894FA81D97555A001F30B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24894FA71D97555A001F30B3 /* AppDelegate.swift */; };
-		24894FAA1D97555A001F30B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24894FA91D97555A001F30B3 /* ViewController.swift */; };
 		24894FAD1D97555A001F30B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24894FAB1D97555A001F30B3 /* Main.storyboard */; };
 		24894FB01D97555A001F30B3 /* Hedge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24894FAE1D97555A001F30B3 /* Hedge.xcdatamodeld */; };
 		24894FB21D97555A001F30B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24894FB11D97555A001F30B3 /* Assets.xcassets */; };
@@ -25,13 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2433A9621D976DC4004D35D2 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		2433A9641D979888004D35D2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2433A9661D9798C2004D35D2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2433A9681D979EF5004D35D2 /* DrugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugViewController.swift; sourceTree = "<group>"; };
 		246991F31D975785009B07EE /* Hedge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hedge-Bridging-Header.h"; sourceTree = "<group>"; };
 		246992191D975EA2009B07EE /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		2469921B1D975EC9009B07EE /* CoreExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtension.swift; sourceTree = "<group>"; };
 		2469921D1D975F0E009B07EE /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		24894FA41D97555A001F30B3 /* Hedge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hedge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24894FA71D97555A001F30B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24894FA91D97555A001F30B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24894FAC1D97555A001F30B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24894FAF1D97555A001F30B3 /* Hedge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hedge.xcdatamodel; sourceTree = "<group>"; };
 		24894FB11D97555A001F30B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				246992191D975EA2009B07EE /* ViewExtension.swift */,
+				2433A9661D9798C2004D35D2 /* ViewController.swift */,
 				2469921B1D975EC9009B07EE /* CoreExtension.swift */,
 			);
 			name = Extensions;
@@ -92,8 +99,10 @@
 			children = (
 				24894FBC1D975582001F30B3 /* TesseractOCR.framework */,
 				24894FA71D97555A001F30B3 /* AppDelegate.swift */,
-				24894FA91D97555A001F30B3 /* ViewController.swift */,
 				2469921D1D975F0E009B07EE /* ScanViewController.swift */,
+				2433A9621D976DC4004D35D2 /* EditViewController.swift */,
+				2433A9681D979EF5004D35D2 /* DrugViewController.swift */,
+				2433A9641D979888004D35D2 /* HomeViewController.swift */,
 				246992181D975E7B009B07EE /* Extensions */,
 				24894FC41D975603001F30B3 /* Supporting Files */,
 				24894FB11D97555A001F30B3 /* Assets.xcassets */,
@@ -191,12 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24894FAA1D97555A001F30B3 /* ViewController.swift in Sources */,
 				24894FA81D97555A001F30B3 /* AppDelegate.swift in Sources */,
 				2469921A1D975EA2009B07EE /* ViewExtension.swift in Sources */,
 				24894FB01D97555A001F30B3 /* Hedge.xcdatamodeld in Sources */,
 				2469921C1D975EC9009B07EE /* CoreExtension.swift in Sources */,
 				2469921E1D975F0E009B07EE /* ScanViewController.swift in Sources */,
+				2433A9651D979888004D35D2 /* HomeViewController.swift in Sources */,
+				2433A9671D9798C2004D35D2 /* ViewController.swift in Sources */,
+				2433A9631D976DC4004D35D2 /* EditViewController.swift in Sources */,
+				2433A9691D979EF5004D35D2 /* DrugViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
