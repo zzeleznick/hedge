@@ -33,6 +33,13 @@ class ScanViewController: ViewController, UINavigationControllerDelegate {
         let skipButton = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(skip))
         navigationItem.setLeftBarButton((skipButton), animated: true)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        Helper.get { result in
+            print("Parsed JSON!")
+            print(result)
+        }
+        super.viewDidAppear(animated)
+    }
     func skip() {
         let dest = HomeViewController()
         navigationController?.pushViewController(dest, animated: true)

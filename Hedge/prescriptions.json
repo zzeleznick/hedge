@@ -1,0 +1,50 @@
+"prescriptions": [
+      {
+        "ndc": "0006-3915",
+        "name": "SINEMET  (carbidopa and levodopa)",
+        "dosage": {
+          "unitsPerDose": 50,
+          "dosesPerDay": 3,
+          "administration": "oral"
+        },
+        "daysSupply": 90,
+        "dateOfFill": "2016-05-05",
+        "fillingProvider": "7384618207"
+      },
+      {
+        "ndc": "0006-9117",
+        "name": "SINGULAIR  (montelukast sodium)",
+        "dosage": {
+          "unitsPerDose": 10,
+          "dosesPerDay": 1,
+          "administration": "oral"
+        },
+        "daysSupply": 30,
+        "dateOfFill": "2016-05-07",
+        "fillingProvider": "7384618207"
+      },
+      {
+        "ndc": "21695-975",
+        "name": "FENTANYL TRANSDERMAL SYSTEM  (fentanyl transdermal system)",
+        "dosage": {
+          "unitsPerDose": 1,
+          "dosesPerDay": 1,
+          "administration": "transdermal"
+        },
+        "daysSupply": 10,
+        "dateOfFill": "2016-05-12",
+        "fillingProvider": "7384618207"
+      },
+      {
+        "ndc": "49999-265",
+        "name": "Omeprazole  (Omeprazole)",
+        "dosage": {
+          "unitsPerDose": 20,
+          "dosesPerDay": 1,
+          "administration": "oral"
+        },
+        "daysSupply": 90,
+        "dateOfFill": "2016-08-12",
+        "fillingProvider": "7384618207"
+      }
+  ]
