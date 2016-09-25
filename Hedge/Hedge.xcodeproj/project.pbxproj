@@ -11,6 +11,14 @@
 		2433A9651D979888004D35D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9641D979888004D35D2 /* HomeViewController.swift */; };
 		2433A9671D9798C2004D35D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9661D9798C2004D35D2 /* ViewController.swift */; };
 		2433A9691D979EF5004D35D2 /* DrugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9681D979EF5004D35D2 /* DrugViewController.swift */; };
+		2433A96B1D97B484004D35D2 /* serene-sm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2433A96A1D97B484004D35D2 /* serene-sm.jpg */; };
+		2433A96E1D97BB49004D35D2 /* capsule-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2433A96C1D97BB49004D35D2 /* capsule-icon.png */; };
+		2433A9731D97BD21004D35D2 /* pill-icon-sm.png in Resources */ = {isa = PBXBuildFile; fileRef = 2433A9721D97BD21004D35D2 /* pill-icon-sm.png */; };
+		2433A9751D981F16004D35D2 /* canyon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2433A9741D981F16004D35D2 /* canyon.jpg */; };
+		2433A9781D98207D004D35D2 /* DrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9771D98207D004D35D2 /* DrugCell.swift */; };
+		2433A97A1D9820BD004D35D2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9791D9820BD004D35D2 /* Theme.swift */; };
+		2433A97E1D983238004D35D2 /* pill-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2433A97D1D983238004D35D2 /* pill-icon.png */; };
+		2433A9801D98333B004D35D2 /* KVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A97F1D98333B004D35D2 /* KVCell.swift */; };
 		2469921A1D975EA2009B07EE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246992191D975EA2009B07EE /* ViewExtension.swift */; };
 		2469921C1D975EC9009B07EE /* CoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469921B1D975EC9009B07EE /* CoreExtension.swift */; };
 		2469921E1D975F0E009B07EE /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469921D1D975F0E009B07EE /* ScanViewController.swift */; };
@@ -32,6 +40,14 @@
 		2433A9641D979888004D35D2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2433A9661D9798C2004D35D2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2433A9681D979EF5004D35D2 /* DrugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugViewController.swift; sourceTree = "<group>"; };
+		2433A96A1D97B484004D35D2 /* serene-sm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "serene-sm.jpg"; sourceTree = "<group>"; };
+		2433A96C1D97BB49004D35D2 /* capsule-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capsule-icon.png"; sourceTree = "<group>"; };
+		2433A9721D97BD21004D35D2 /* pill-icon-sm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pill-icon-sm.png"; sourceTree = "<group>"; };
+		2433A9741D981F16004D35D2 /* canyon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = canyon.jpg; sourceTree = "<group>"; };
+		2433A9771D98207D004D35D2 /* DrugCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugCell.swift; sourceTree = "<group>"; };
+		2433A9791D9820BD004D35D2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2433A97D1D983238004D35D2 /* pill-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pill-icon.png"; sourceTree = "<group>"; };
+		2433A97F1D98333B004D35D2 /* KVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCell.swift; sourceTree = "<group>"; };
 		246991F31D975785009B07EE /* Hedge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hedge-Bridging-Header.h"; sourceTree = "<group>"; };
 		246992191D975EA2009B07EE /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		2469921B1D975EC9009B07EE /* CoreExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtension.swift; sourceTree = "<group>"; };
@@ -65,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2433A9761D98202F004D35D2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2433A9771D98207D004D35D2 /* DrugCell.swift */,
+				2433A97F1D98333B004D35D2 /* KVCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		246992181D975E7B009B07EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +128,8 @@
 				2433A9621D976DC4004D35D2 /* EditViewController.swift */,
 				2433A9681D979EF5004D35D2 /* DrugViewController.swift */,
 				2433A9641D979888004D35D2 /* HomeViewController.swift */,
+				2433A9791D9820BD004D35D2 /* Theme.swift */,
+				2433A9761D98202F004D35D2 /* Cells */,
 				246992181D975E7B009B07EE /* Extensions */,
 				24894FC41D975603001F30B3 /* Supporting Files */,
 				24894FB11D97555A001F30B3 /* Assets.xcassets */,
@@ -117,6 +144,11 @@
 		24894FC41D975603001F30B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2433A96A1D97B484004D35D2 /* serene-sm.jpg */,
+				2433A96C1D97BB49004D35D2 /* capsule-icon.png */,
+				2433A9741D981F16004D35D2 /* canyon.jpg */,
+				2433A97D1D983238004D35D2 /* pill-icon.png */,
+				2433A9721D97BD21004D35D2 /* pill-icon-sm.png */,
 				24894FC51D975619001F30B3 /* Envelope.png */,
 				24894FC61D975619001F30B3 /* Swap.png */,
 				24894FBE1D97559B001F30B3 /* tessdata */,
@@ -186,10 +218,15 @@
 			files = (
 				24894FC81D975619001F30B3 /* Swap.png in Resources */,
 				24894FB51D97555A001F30B3 /* LaunchScreen.storyboard in Resources */,
+				2433A9751D981F16004D35D2 /* canyon.jpg in Resources */,
 				24894FC71D975619001F30B3 /* Envelope.png in Resources */,
 				24894FBF1D97559B001F30B3 /* tessdata in Resources */,
+				2433A9731D97BD21004D35D2 /* pill-icon-sm.png in Resources */,
 				24894FB21D97555A001F30B3 /* Assets.xcassets in Resources */,
+				2433A97E1D983238004D35D2 /* pill-icon.png in Resources */,
 				24894FAD1D97555A001F30B3 /* Main.storyboard in Resources */,
+				2433A96E1D97BB49004D35D2 /* capsule-icon.png in Resources */,
+				2433A96B1D97B484004D35D2 /* serene-sm.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +238,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24894FA81D97555A001F30B3 /* AppDelegate.swift in Sources */,
+				2433A9781D98207D004D35D2 /* DrugCell.swift in Sources */,
 				2469921A1D975EA2009B07EE /* ViewExtension.swift in Sources */,
 				24894FB01D97555A001F30B3 /* Hedge.xcdatamodeld in Sources */,
+				2433A9801D98333B004D35D2 /* KVCell.swift in Sources */,
+				2433A97A1D9820BD004D35D2 /* Theme.swift in Sources */,
 				2469921C1D975EC9009B07EE /* CoreExtension.swift in Sources */,
 				2469921E1D975F0E009B07EE /* ScanViewController.swift in Sources */,
 				2433A9651D979888004D35D2 /* HomeViewController.swift in Sources */,

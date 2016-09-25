@@ -52,3 +52,15 @@ extension UIView {
     }
 }
 
+extension UIImageView {
+    
+    func blur() {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.alpha = 0.9
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(blurEffectView)
+    }
+}
+

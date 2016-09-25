@@ -30,6 +30,12 @@ class ScanViewController: ViewController, UINavigationControllerDelegate {
         makeButtons()
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(proceed))
         navigationItem.setRightBarButton(addButton, animated: true)
+        let skipButton = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(skip))
+        navigationItem.setLeftBarButton((skipButton), animated: true)
+    }
+    func skip() {
+        let dest = HomeViewController()
+        navigationController?.pushViewController(dest, animated: true)
     }
     
     func proceed() {

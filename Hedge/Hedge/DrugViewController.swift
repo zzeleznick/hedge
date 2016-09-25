@@ -9,39 +9,71 @@
 
 import UIKit
 
-class DrugViewController: ViewController {
+class DrugViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
     var container = UIView()
     var bodyContainer = UIView()
-    var heading = UILabel()
-    var subheading = UILabel()
+    var myTable = UITableView()
+    
+    var titleLabel = UILabel()
+    var subtitleLabel = UILabel()
+    
+    var titleText = "Drug Name"
+    var subtitleText = "Humana Member"
+    
+    typealias CellType = KVCell
+    fileprivate struct Main {
+        static let CellIdentifier = "cell"
+        static let CellClass = CellType.self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Home"
+        navigationItem.title = "Drug ID"
         placeElements()
     }
+    
     func placeElements() {
-        view.addUIElement(container, frame: CGRect(x:0, y:80, width:w, height: 200)) { element in
+        view.addUIElement(container, frame: CGRect(x:0, y:50, width:w, height: 180)) { element in
             guard element is UIView else { return }
         }
-        
-        view.addUIElement(bodyContainer, frame: CGRect(x:0, y:280, width:w, height: h-220)) { element in
+        let image = UIImage(named: "pill-icon.png")
+        let imageFrame = UIImageView(image: image)
+        imageFrame.contentMode = .scaleAspectFill
+        container.addUIElement(imageFrame, frame: CGRect(x:w/6.0, y:20, width:w * (1.0-2.0/6.0), height: 180-20))
+        view.addUIElement(bodyContainer, frame: CGRect(x:0, y:230, width:w, height: h-230)) { element in
             guard element is UIView else { return }
         }
-        container.addUIElement(heading, text: "Robert D. Smith", frame: CGRect(x:25, y:0, width:w-50, height: 50)) { element in
+        bodyContainer.addUIElement(titleLabel, text: titleText, frame: CGRect(x:25, y:20, width:w-50, height: 50)) { element in
             guard let label = element as? UILabel else { return }
             label.font = UIFont(name: label.font.fontName, size: 22)
         }
-        container.addUIElement(subheading, text: "Humana Member", frame: CGRect(x:25, y:80, width:w-50, height: 50)) { element in
+        bodyContainer.addUIElement(subtitleLabel, text: subtitleText, frame: CGRect(x:25, y:100, width:w-50, height: 50)) { element in
             guard let label = element as? UILabel else { return }
             label.font = UIFont(name: label.font.fontName, size: 18)
         }
-        bodyContainer.addUIElement(UILabel(), text: "Pills here", frame: CGRect(x:25, y:0, width:w-50, height: 50)) { element in
-            guard let label = element as? UILabel else { return }
-            label.font = UIFont(name: label.font.fontName, size: 22)
-            label.textColor = UIColor.darkGray
-        }
         
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let idx = indexPath.row
+        let cell = myTable.dequeueReusableCell(withIdentifier: Main.CellIdentifier, for: indexPath) as! CellType
+        
+        let key = bobKeys[idx]
+        cell.keyLabel.text = key.capitalizedString
+        if let value = Bob.dict[key] {
+            cell.valueLabel.text = "\(value)"
+        }
+        cell.setBounds()
+        cell.selectionStyle = .none
+        return cell
     }
 }
