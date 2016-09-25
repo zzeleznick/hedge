@@ -66,6 +66,8 @@ class Helper {
                                             subdict["name"] = "\(svalue)"
                                         case "dateOfFill":
                                             subdict["dateOfFill"] = "\(svalue)"
+                                        case "daysSupply":
+                                            subdict["daysSupply"] = "\(svalue)"
                                         default: break
                                     }
                                     pResult["\(sid)"] = subdict

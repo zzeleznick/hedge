@@ -41,7 +41,8 @@ class ScanViewController: ViewController, UINavigationControllerDelegate {
             if let med = value as? [String: String] {
                 let name = med["name"]
                 let dateOfFill = med["dateOfFill"]
-                let rx = Rx(name: name, fillDate: dateOfFill)
+                let daysSupply = med["daysSupply"]
+                let rx = Rx(name: name, fillDate: dateOfFill, daysSupply: daysSupply)
                 if self.meds.count < 4 {
                     self.meds.append(rx)
                 }

@@ -87,12 +87,14 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
         let cell = myTable.dequeueReusableCell(withIdentifier: Main.CellIdentifier, for: indexPath) as! CellType
         
         let name = meds[idx].name
-        let loc = meds[idx].fillDate
+        let loc = "Fill Date: \(meds[idx].fillDate)"
         // let name = "Drug \(idx)"
         // let loc = "subtitle"
+        let right = "DS: \(meds[idx].daysSupply)"
         
         cell.titleLabel.text = name
         cell.subtitleLabel.text = loc
+        cell.rightLabel.text = right
         cell.setBounds()
         cell.selectionStyle = .none
         return cell

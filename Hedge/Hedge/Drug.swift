@@ -23,13 +23,17 @@ class StrList:  CustomStringConvertible {
 class Rx: CustomStringConvertible {
     var name: String = "Lipitor"
     var fillDate: String = "Unknown"
-
-    init(name: String?, fillDate: String? ) {
+    var daysSupply: String = "0"
+    
+    init(name: String?, fillDate: String?, daysSupply: String? ) {
         if let myname = name {
             self.name = myname
         }
-        if let myfillDate = fillDate {
-            self.fillDate = myfillDate
+        if let fillDate = fillDate {
+            self.fillDate = fillDate
+        }
+        if let daysSupply = daysSupply {
+            self.daysSupply = daysSupply
         }
     }
     var description: String {

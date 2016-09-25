@@ -32,7 +32,6 @@ def main():
     text = NSString.alloc().initWithString_(inputText)
     text.drawAtPoint_withAttributes_(NSMakePoint(10, 10), attrs)
     image.unlockFocus()
-
     path = os.path.expanduser("~/GeneratedBackground.png")
     path2 = os.path.expanduser("~/GeneratedBackground2.png")
 
