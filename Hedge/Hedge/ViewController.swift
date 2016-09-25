@@ -19,4 +19,8 @@ class ViewController: UIViewController {
         w = view.bounds.size.width
         h = view.bounds.size.height
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 }

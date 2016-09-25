@@ -19,6 +19,8 @@
 		2433A97A1D9820BD004D35D2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9791D9820BD004D35D2 /* Theme.swift */; };
 		2433A97E1D983238004D35D2 /* pill-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2433A97D1D983238004D35D2 /* pill-icon.png */; };
 		2433A9801D98333B004D35D2 /* KVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A97F1D98333B004D35D2 /* KVCell.swift */; };
+		2433A9831D983900004D35D2 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9821D983900004D35D2 /* Drug.swift */; };
+		2433A9851D983942004D35D2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433A9841D983942004D35D2 /* Image.swift */; };
 		2469921A1D975EA2009B07EE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246992191D975EA2009B07EE /* ViewExtension.swift */; };
 		2469921C1D975EC9009B07EE /* CoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469921B1D975EC9009B07EE /* CoreExtension.swift */; };
 		2469921E1D975F0E009B07EE /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469921D1D975F0E009B07EE /* ScanViewController.swift */; };
@@ -48,6 +50,8 @@
 		2433A9791D9820BD004D35D2 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		2433A97D1D983238004D35D2 /* pill-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pill-icon.png"; sourceTree = "<group>"; };
 		2433A97F1D98333B004D35D2 /* KVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCell.swift; sourceTree = "<group>"; };
+		2433A9821D983900004D35D2 /* Drug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		2433A9841D983942004D35D2 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		246991F31D975785009B07EE /* Hedge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hedge-Bridging-Header.h"; sourceTree = "<group>"; };
 		246992191D975EA2009B07EE /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		2469921B1D975EC9009B07EE /* CoreExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtension.swift; sourceTree = "<group>"; };
@@ -90,11 +94,20 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		2433A9811D9838F4004D35D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2433A9821D983900004D35D2 /* Drug.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		246992181D975E7B009B07EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				246992191D975EA2009B07EE /* ViewExtension.swift */,
 				2433A9661D9798C2004D35D2 /* ViewController.swift */,
+				2433A9841D983942004D35D2 /* Image.swift */,
 				2469921B1D975EC9009B07EE /* CoreExtension.swift */,
 			);
 			name = Extensions;
@@ -129,6 +142,7 @@
 				2433A9681D979EF5004D35D2 /* DrugViewController.swift */,
 				2433A9641D979888004D35D2 /* HomeViewController.swift */,
 				2433A9791D9820BD004D35D2 /* Theme.swift */,
+				2433A9811D9838F4004D35D2 /* Model */,
 				2433A9761D98202F004D35D2 /* Cells */,
 				246992181D975E7B009B07EE /* Extensions */,
 				24894FC41D975603001F30B3 /* Supporting Files */,
@@ -243,6 +257,8 @@
 				24894FB01D97555A001F30B3 /* Hedge.xcdatamodeld in Sources */,
 				2433A9801D98333B004D35D2 /* KVCell.swift in Sources */,
 				2433A97A1D9820BD004D35D2 /* Theme.swift in Sources */,
+				2433A9831D983900004D35D2 /* Drug.swift in Sources */,
+				2433A9851D983942004D35D2 /* Image.swift in Sources */,
 				2469921C1D975EC9009B07EE /* CoreExtension.swift in Sources */,
 				2469921E1D975F0E009B07EE /* ScanViewController.swift in Sources */,
 				2433A9651D979888004D35D2 /* HomeViewController.swift in Sources */,
