@@ -43,10 +43,10 @@ class Helper {
                     print(jsonResult)
                     
                     if let json = jsonResult as? [String:Any] {
-                        var pResult: [String: Any] = ["foo": "bar"]
+                        var pResult: [String: Any] = [:] //["foo": "bar"]
                         for (key, value) in json {
                             print("\(key) - \(value) ")
-                            pResult[key] = "\(value)"
+                            // pResult[key] = "\(value)"
                             /* if let sjson = value as? [String:Any] {
                                 for (skey, svalue) in sjson {
                                     pResult[skey] = "\(svalue)"
