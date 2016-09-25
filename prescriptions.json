@@ -1,4 +1,4 @@
-"prescriptions": [
+{ "prescriptions": [
       {
         "ndc": "0006-3915",
         "name": "SINEMET  (carbidopa and levodopa)",
@@ -48,3 +48,4 @@
         "fillingProvider": "7384618207"
       }
   ]
+}

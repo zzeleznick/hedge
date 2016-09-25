@@ -22,7 +22,9 @@ class ScanViewController: ViewController, UINavigationControllerDelegate {
             scanButton.setTitle("Re-Scan", for: UIControlState())
         }
     }
-
+    
+    var meds: [Rx] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Scan Rx"
@@ -33,21 +35,40 @@ class ScanViewController: ViewController, UINavigationControllerDelegate {
         let skipButton = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(skip))
         navigationItem.setLeftBarButton((skipButton), animated: true)
     }
+    
+    func parseMeds(_ medList: [String: Any]) {
+        for (key, value) in medList {
+            if let med = value as? [String: String] {
+                let name = med["name"]
+                let dateOfFill = med["dateOfFill"]
+                let rx = Rx(name: name, fillDate: dateOfFill)
+                if self.meds.count < 4 {
+                    self.meds.append(rx)
+                }
+            }
+        }
+        print(self.meds)
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         Helper.get { result in
             print("Parsed JSON!")
             print(result)
+            self.parseMeds(result)
         }
         super.viewDidAppear(animated)
     }
     func skip() {
         let dest = HomeViewController()
+        dest.meds = self.meds
         navigationController?.pushViewController(dest, animated: true)
     }
     
     func proceed() {
         let dest = EditViewController()
         dest.textData = textData
+        dest.meds = self.meds
         navigationController?.pushViewController(dest, animated: true)
     }
 

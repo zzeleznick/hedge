@@ -20,6 +20,24 @@ class StrList:  CustomStringConvertible {
     
 }
 
+class Rx: CustomStringConvertible {
+    var name: String = "Lipitor"
+    var fillDate: String = "Unknown"
+
+    init(name: String?, fillDate: String? ) {
+        if let myname = name {
+            self.name = myname
+        }
+        if let myfillDate = fillDate {
+            self.fillDate = myfillDate
+        }
+    }
+    var description: String {
+        return "RX:(name: \(name), fillDate: \(fillDate)) "
+    }
+}
+
+
 class Drug: CustomStringConvertible {
     var name: String!
     var sideEffects: StrList!

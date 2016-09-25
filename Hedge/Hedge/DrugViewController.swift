@@ -11,17 +11,19 @@ import UIKit
 
 class DrugViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var meds: [Rx] = []
+    
     var container = UIView()
     var bodyContainer = UIView()
     var myTable = UITableView()
-    
+
     var titleLabel = UILabel()
     var subtitleLabel = UILabel()
     
     var titleText = "Drug Name"
     var subtitleText = "Humana Member"
     
-    let Bob = Drug(name:"Lipitor", sideEffects: ["Tiredness, Confusion, Diarrhea"], relatedDrugs: ["Generic Atorvastatin"])
+    var Bob = Drug(name:"Lipitor", sideEffects: ["Tiredness, Confusion, Diarrhea"], relatedDrugs: ["Generic Atorvastatin"])
     
     var bobKeys: [String]!
     

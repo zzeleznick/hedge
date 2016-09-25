@@ -11,7 +11,8 @@ import Foundation
 
 class Helper {
     
-    var result: [String:String] = [:]
+    var meds: [Rx] = []
+    
     class func parseText(text: String) -> [String:AnyObject]? {
         if let data = text.data(using: String.Encoding.utf8) {
             do {
@@ -23,8 +24,9 @@ class Helper {
             return nil
     }
     class func get(callback: @escaping (_ result: [String:Any]) -> Void ) {
-        let requestURL = URL(string: "http://www.learnswiftonline.com/Samples/subway.json")!
+        let requestURL = URL(string: "http://peaceful-frog.surge.sh/index.json")!
         let request = NSMutableURLRequest(url: requestURL)
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             (data, response, error) -> Void in
             
@@ -37,7 +39,6 @@ class Helper {
             if let urlContent = data {
                 
                 do {
-                    
                     let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers)
                     
                     print(jsonResult)
@@ -53,16 +54,25 @@ class Helper {
                                 }
                             } */
                             let pcontainer = value as! [ [String:Any] ]
-                            for (id, container) in pcontainer.enumerated() {
+                            var sid = 0
+                            for (_, container) in pcontainer.enumerated() {
                                 let scontainer = container as [String:AnyObject]
-                                var sid = 0
+                                pResult["\(sid)"] = [String:String]()
                                 for (skey, svalue) in scontainer {
-                                    pResult["\(sid)"] = ["\(skey)": "\(svalue)"]
-                                    sid += 1
+                                    var subdict = pResult["\(sid)"] as! [String:String]
+                                    print(skey)
+                                    switch skey {
+                                        case "name":
+                                            subdict["name"] = "\(svalue)"
+                                        case "dateOfFill":
+                                            subdict["dateOfFill"] = "\(svalue)"
+                                        default: break
+                                    }
+                                    pResult["\(sid)"] = subdict
                                 }
+                                sid += 1
                             }
                         }
-                        
                         callback(pResult)
                     }
                     

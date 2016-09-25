@@ -17,6 +17,8 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     
     var myTable = UITableView()
     
+    var meds: [Rx] = []
+    
     typealias CellType = DrugCell
     fileprivate struct Main {
         static let CellIdentifier = "cell"
@@ -68,7 +70,9 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dest = DrugViewController()
         let idx = indexPath.row
-        dest.titleText = "Drug \(idx)"
+        let drugname = meds[idx].name
+        dest.titleText = drugname //"Drug \(idx)"
+        dest.Bob = Drug(name: drugname, sideEffects: ["Tiredness, Confusion, Diarrhea"], relatedDrugs: ["Generic Atorvastatin"])
         navigationController?.pushViewController(dest, animated: true)
     }
     
@@ -76,13 +80,16 @@ class HomeViewController: ViewController, UITableViewDelegate, UITableViewDataSo
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return meds.count // 8
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let idx = indexPath.row
         let cell = myTable.dequeueReusableCell(withIdentifier: Main.CellIdentifier, for: indexPath) as! CellType
-        let name = "Drug \(idx)"
-        let loc = "subtitle"
+        
+        let name = meds[idx].name
+        let loc = meds[idx].fillDate
+        // let name = "Drug \(idx)"
+        // let loc = "subtitle"
         
         cell.titleLabel.text = name
         cell.subtitleLabel.text = loc

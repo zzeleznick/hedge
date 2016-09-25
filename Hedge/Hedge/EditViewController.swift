@@ -26,7 +26,8 @@ class EditViewController: ViewController, UITextFieldDelegate, UIGestureRecogniz
     var dinEntry = UITextField()
     var confirmButton = UIButton()
    
-
+    var meds: [Rx] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Edit"
@@ -78,6 +79,7 @@ class EditViewController: ViewController, UITextFieldDelegate, UIGestureRecogniz
     }
     func confirmPressed(_ sender: UIButton) {
         let dest = HomeViewController() //DrugViewController()
+        dest.meds = self.meds
         navigationController?.pushViewController(dest, animated: true)
     }
     
