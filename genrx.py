@@ -45,7 +45,8 @@ def main():
     NSBitmapImageRep.imageRepWithData_(image.TIFFRepresentation()).representationUsingType_properties_(
         NSPNGFileType, {NSImageCompressionFactor: NSNumber.numberWithFloat_(1.0)}).writeToFile_atomically_(path, False)
     os.system('osascript -e \'tell application "Finder" to set desktop picture to POSIX file "{}"\''.format(path))
-    os.system('open %s' % path)
+    os.system('cp %s bk.png' % path)
+    # os.system('open bk.png')
 
 if __name__ == '__main__':
     main()
